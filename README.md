@@ -1,4 +1,4 @@
-# digital-payment-index
+# Digital Payment Index
 
 This project aims to develop an index i.e Digital Payment Index to track the quantum of digital transaction in the country 
 
