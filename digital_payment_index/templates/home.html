@@ -10,6 +10,8 @@
     {% load_chart charttype1 chartdata1 chartcontainer1 extra1 %}
     
   <title>Digital Payment Index Tracker</title>
+  {% load static %}
+  <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -17,6 +19,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
   <style>
   body {
     font: 400 15px Lato, sans-serif;
@@ -308,15 +311,19 @@
 <div id="contact" class="container-fluid">
   <h2 class="text-center">CONTACT US</h2>
   <div class="row">
-    <div class="col-sm-6">
-      <a href="https://linkedin.com/your/profile/url" class="social-icon si-rounded si-small si-linkedin">
-        <i class="icon-linkedin"></i>
-        <i class="icon-linkedin"></i>
-     </a>
+
+    <div class="col-sm-6" style="position:relative;right:-400px;">
+      
+      <div class="badge-base LI-profile-badge"  data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="rahul-podi" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/rahul-podi/trk=profile-badge">Rahul PR</a></div>
+                 
     </div>
+    <div class="col-sm-6">
+      <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="techwithbala" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/techwithbala?trk=profile-badge">Balaji Seetharaman 🎓</a></div>                    
+     
+    </div>
+     
   </div>
 </div>
-
 <!-- Image of location/map -->
 <!-- <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--DoX2pFw8--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/jwymep5tm3xvcevmv5vy.png" class="w3-image w3-greyscale-min" style="width:100%"> -->
 
