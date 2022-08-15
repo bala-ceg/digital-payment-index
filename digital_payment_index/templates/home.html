@@ -8,8 +8,9 @@
     <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
     {% include_chart_jscss %}
     {% load_chart charttype1 chartdata1 chartcontainer1 extra1 %}
-    
+ 
   <title>Digital Payment Index Tracker</title>
+  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -39,10 +40,12 @@
     margin-bottom: 30px;
   }  
   .jumbotron {
-    background-image: linear-gradient(0deg, #138808 33%, #ffffff 33%, #ffffff 66%, #FF9933 66% );
+    background-image: linear-gradient(0deg, #138808 33%, #ffffff 33%, #ffffff 66%, #FF9933 66% ) ;
     color: #fff;
     padding: 100px 25px;
     font-family: Montserrat, sans-serif;
+    background-size: cover;
+    background-position: center;
   }
   .container-fluid {
     padding: 60px 50px;
@@ -192,20 +195,59 @@
       margin-bottom: 35px;
     }
   }
+
   @media screen and (max-width: 480px) {
-    .logo {
-      font-size: 150px;
+      h1 {
+        font-size: 28px !important;
+        line-height: 80%;
+        margin-top: 10px;
+      }
+      h2 {
+        font-size: 20px !important;
+        letter-spacing: 1.2px;
+      }
+      p {
+        font-size: 14px !important;
+      }
+
+      h3 {
+        font-size: 16px;
+      }
+      h4 {
+        font-size: 14px !important;
+      }
+      h5 {
+        font-size: 11px;
+      }
+      .logo-img {
+        width: 160px;
+        position: absolute;
+      }
+      .main-img {
+        width: 100%;
+      }
+      .footer-img {
+       width: 100%;
+      }
+      .line {
+        width: 90%;
+      }
+      .copy {
+        font-size: 10px;
+        font-weight: 100;
+        font-family: sans-serif;
     }
-  }
+    }
+
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
 
 
-<div class="jumbotron text-center">
-  <h1 style="color:#303030">Digital Payment Index Tracker</h1> 
-  <p style="color:#303030">Index value of India's Digital Transactions</p> 
+<div class="jumbotron jumbotron-fluid text-center" style="justify-content: center">
+  <h1 class= "display-4" style="color:#000080">Digital Payment Index Tracker</h1> 
+  <p class="lead" style="color:#303030;">Index value of India's Digital Transactions</p> 
   
 </div>
 
@@ -225,6 +267,8 @@
           <li><a href="#about">ABOUT</a></li>
           <li><a href="#monthlydpi">DPI DATA</a></li>
           <li><a href="#socialmedia">SOCIAL MEDIA</a></li>
+          <li><a href="#spreadaword">SUPPORT US</a></li>
+          <li><a href="#tweetus">TWEET US</a></li>
           <li><a href="#contact">CONTACT</a></li>
         </ul>
       </div>
@@ -235,15 +279,17 @@
 <div id="about" class="container-fluid">
   <div class="row">
     <div class="col-sm-8">
-      <h2>About Digital Payment Index</h2><br>
-    
-      <h4>We aim to develop an index to track the quantum of digital transaction in the country across products ranging from FASTag to non-internet based UPI transactions </h4><br>
+      <h2 style="color:#000080">About Digital Payment Index</h2><br>
+      <h4>UPI touched record high of 6 billion transactions worth 10 trillion recently </h4>
+      <h4>But daily tracking of these numbers is cumbersome and these numbers are getting too big to put our heads around it. </h4>
+      <h4>Many feel tracking these numbers like stock market index such as NIFTY, SENSEX etc.. will make the everyone's life easier </h4>
+      <h4>This product does exactly that by tracking DPI Index which not only includes UPI but also NEFT, RTGS, IMPS, FASTag and NACH </h4><br>
       <p>For more information read the below article </p>
       <a href="https://analytics-digest.medium.com/digital-transaction-index-economic-indicators-420ea37f68d2"> Digtial Payment Index </a>
     </div>
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-stats logo"></span>
-    </div>
+      <img src="https://i.ibb.co/LPP3WGV/DPI.png" style="max-width:100%;height:auto;" alt="DPI" border="0">
+   </div>
   </div>
 </div>
 
@@ -252,8 +298,8 @@
 <div id="monthlydpi" class="container-fluid">
   <div class="row">
     <div class="col-sm-12">
-      <h2>DPI DATA</h2><br>
-      <h4>In the below graph, Monthly DPI Index value is shown. Please hover over the mouse to the particular date to know the value and this graph will be updated Monthly</h4> <br>
+      <h2 style="color:#000080">DPI DATA</h2><br>
+      <h4>In the below graph, Monthly DPI Index value is shown. Please hover over the mouse to the particular date to know the value and this graph will be updated Monthly</h4> 
     </div>
     </div>
   </div>
@@ -261,9 +307,10 @@
 
 <div id="dpi" class="container-fluid text-center" style="width:800px; margin:0 auto;">
   
-  <h2>MONTHLY DPI Tracker</h2>
+  <h2 style="color:#000080">MONTHLY DPI Tracker</h2>
   
   {% include_container chartcontainer1 %}
+  
 
   
 </div>
@@ -275,9 +322,19 @@
 
 <!-- Container (Contact Section) -->
 <div id="socialmedia" class="container-fluid">
-  <h2 class="text-center">SOCIAL MEDIA</h2>
+  <h2 class="text-center" style="color:#000080">SOCIAL MEDIA</h2>
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-xs-12 col-md-6" align="center">
+
+      <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6964861893442228224" height="758" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+      <!-- <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p> -->
+    </div>
+    
+    <div class="col-xs-12 col-md-6" align="center">
+      <br>
 
       <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6958697028893782016" height="884" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
       <!-- <p>Contact us and we'll get back to you within 24 hours.</p>
@@ -286,42 +343,43 @@
       <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p> -->
     </div>
     
-    <div class="col-sm-4">
-
-      <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6958697028893782016" height="884" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
-      <!-- <p>Contact us and we'll get back to you within 24 hours.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
-      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p> -->
-    </div>
-    <div class="col-sm-4">
-
-      <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6958697028893782016" height="884" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
-      <!-- <p>Contact us and we'll get back to you within 24 hours.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
-      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p> -->
-    </div>
-    
+   
   </div>
 </div>
+
+<div id="spreadaword" class="container-fluid" align="center" >
+
+  <h2 class="text-center" style="color:#000080">SUPPORT US</h2>
+  <h4>If you liked this product, Please support us by upvoting in Product Hunt</h4>
+  <a href="https://www.producthunt.com/posts/digital-payment-index-tracker?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-digital&#0045;payment&#0045;index&#0045;tracker" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=355972&theme=light" alt="Digital&#0032;Payment&#0032;Index&#0032;Tracker - Index&#0032;value&#0032;of&#0032;India&#0039;s&#0032;Digital&#0032;Transactions | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+</div>
+
+<div id="tweetus" class="container-fluid" align="center" >
+
+  <h2 class="text-center" style="color:#000080">TWEET US</h2>
+  <h4>Please support by clicking Tweet us</h4>
+  <a alt="" target="_blank" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdigital-payment-index.herokuapp.com%2F&text=Hey%20there!%20I%20found%20this%20cool%20website%20that%20track%20the%20India's%20digital%20payment%20index.%20Check%20out%20below&hashtags=upi,india75,digitalindia">Tweet us</a>
+</div>
+
 
 <div id="contact" class="container-fluid">
-  <h2 class="text-center">CONTACT US</h2>
+  <h2 class="text-center" style="color:#000080">CONTACT US</h2>
   <div class="row">
 
-    <div class="col-sm-6" style="position:relative;right:-400px;">
-      
+    <div class="col-xs-12 col-md-6" align="center" >
       <div class="badge-base LI-profile-badge"  data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="rahul-podi" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/rahul-podi/trk=profile-badge">Rahul PR</a></div>
-                 
+              
+    
     </div>
-    <div class="col-sm-6">
-      <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="techwithbala" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/techwithbala?trk=profile-badge">Balaji Seetharaman 🎓</a></div>                    
+    <div class="col-xs-12 col-md-6" align="center">
+      <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="techwithbala" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/techwithbala?trk=profile-badge">Balaji Seetharaman 🎓</a></div>          
+              
      
     </div>
      
   </div>
 </div>
+
 <!-- Image of location/map -->
 <!-- <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--DoX2pFw8--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/jwymep5tm3xvcevmv5vy.png" class="w3-image w3-greyscale-min" style="width:100%"> -->
 
