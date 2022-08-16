@@ -1,22 +1,9 @@
-import os
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'digital_payment_index.settings')
-
-import sys
-
-if sys.version_info[:2] >= (3, 8):
-    from collections.abc import MutableMapping
-else:
-    from collections import MutableMapping
-
-import django
-django.setup()
-
 import pandas as pd
 import requests
 import datetime
 import calendar
 import time 
-from digital_payment_index.models import daily_index_data
+#from digital_payment_index.models import daily_index_data
 import numpy as np
 from apscheduler.schedulers.blocking import BlockingScheduler
 
@@ -96,7 +83,7 @@ def my_scheduled_job():
 
 
     #print("fisher_coeffient:",op)
-    daily_index_data.objects.create(date=old_date,UPI_Vol=UPI_Vol,UPI_Val=UPI_Val,IMPS_Vol=IMPS_Vol,IMPS_Val=IMPS_Val,NACH_Vol=NACH_Vol,NACH_Val=NACH_Val,NETC_Vol=NETC_Vol,NETC_Val=NETC_Val,NEFT_Vol=NEFT_Vol,NEFT_Val=NEFT_Val,RTGS_Vol=RTGS_Vol,RTGS_Val=RTGS_Val,index_value=op)
+    #daily_index_data.objects.create(date=old_date,UPI_Vol=UPI_Vol,UPI_Val=UPI_Val,IMPS_Vol=IMPS_Vol,IMPS_Val=IMPS_Val,NACH_Vol=NACH_Vol,NACH_Val=NACH_Val,NETC_Vol=NETC_Vol,NETC_Val=NETC_Val,NEFT_Vol=NEFT_Vol,NEFT_Val=NEFT_Val,RTGS_Vol=RTGS_Vol,RTGS_Val=RTGS_Val,index_value=op)
 
 
 
@@ -175,6 +162,6 @@ def my_scheduled_job():
             op = fisher_coeff * ((-10.719 * np.log(int(date)))+ 21.8)
 
     #print("fisher_coeffient:",op)
-    daily_index_data.objects.create(date=old_date,UPI_Vol=UPI_Vol,UPI_Val=UPI_Val,IMPS_Vol=IMPS_Vol,IMPS_Val=IMPS_Val,NACH_Vol=NACH_Vol,NACH_Val=NACH_Val,NETC_Vol=NETC_Vol,NETC_Val=NETC_Val,NEFT_Vol=NEFT_Vol,NEFT_Val=NEFT_Val,RTGS_Vol=RTGS_Vol,RTGS_Val=RTGS_Val,index_value=op)
+    #daily_index_data.objects.create(date=old_date,UPI_Vol=UPI_Vol,UPI_Val=UPI_Val,IMPS_Vol=IMPS_Vol,IMPS_Val=IMPS_Val,NACH_Vol=NACH_Vol,NACH_Val=NACH_Val,NETC_Vol=NETC_Vol,NETC_Val=NETC_Val,NEFT_Vol=NEFT_Vol,NEFT_Val=NEFT_Val,RTGS_Vol=RTGS_Vol,RTGS_Val=RTGS_Val,index_value=op)
 
 sched.start()
