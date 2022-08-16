@@ -14,9 +14,9 @@ from digital_payment_index.models import daily_index_data
 import numpy as np
 from apscheduler.schedulers.blocking import BlockingScheduler
 
-sched =  BlockingScheduler(timezone="Asia/Kolkata")
+sched =  BlockingScheduler(timezone='Asia/Kolkata')
 
-@sched.scheduled_job('cron', day_of_week='tue-fri', hour=21)
+@sched.scheduled_job('cron', day_of_week='tue-fri',hour=21, minute=10, timezone='Asia/Kolkata')
 
 def my_scheduled_job():
     theurl ='https://rbidocs.rbi.org.in/rdocs/content/docs/PSDDP04062020.xlsx'
