@@ -9,7 +9,7 @@ class historic_index_data(models.Model):
     index_value = models.FloatField()
 
 class daily_index_data(models.Model):
-    date = models.DateField(unique=True)
+    date = models.DateField()
     UPI_Vol     = models.FloatField()
     UPI_Val     = models.FloatField()
     IMPS_Vol    = models.FloatField()
