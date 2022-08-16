@@ -1,6 +1,6 @@
 import os
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'digital_payment_index.settings')
-
+from collections.abc import MutableMapping
 import django
 django.setup()
 
