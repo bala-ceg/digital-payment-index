@@ -1,6 +1,9 @@
 import os
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'digital_payment_index.settings')
 
+import django
+django.setup()
+
 import pandas as pd
 import requests
 import datetime
