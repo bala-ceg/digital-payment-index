@@ -1,6 +1,13 @@
 import os
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'digital_payment_index.settings')
-from collections.abc import MutableMapping
+
+import sys
+
+if sys.version_info[:2] >= (3, 8):
+    from collections.abc import MutableMapping
+else:
+    from collections import MutableMapping
+
 import django
 django.setup()
 
