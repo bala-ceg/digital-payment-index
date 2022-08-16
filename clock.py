@@ -1,3 +1,6 @@
+import os
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'digital_payment_index.settings')
+
 import pandas as pd
 import requests
 import datetime
