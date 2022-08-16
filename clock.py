@@ -16,7 +16,7 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 
 sched =  BlockingScheduler(timezone='Asia/Kolkata')
 
-@sched.scheduled_job('cron', day_of_week='tue-fri',hour=21, minute=10, timezone='Asia/Kolkata')
+@sched.scheduled_job('cron', day_of_week='tue-fri',hour=21, minute=55, timezone='Asia/Kolkata')
 
 def my_scheduled_job():
     theurl ='https://rbidocs.rbi.org.in/rdocs/content/docs/PSDDP04062020.xlsx'
