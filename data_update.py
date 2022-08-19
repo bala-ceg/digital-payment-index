@@ -4,6 +4,14 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'digital_payment_index.settings'
 import django
 django.setup()
 
+import pandas as pd
+import requests
+import datetime
+import calendar
+import time 
+from digital_payment_index.models import daily_index_data
+import numpy as np
+
 theurl ='https://rbidocs.rbi.org.in/rdocs/content/docs/PSDDP04062020.xlsx'
 n1=12
 
