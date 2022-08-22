@@ -168,7 +168,7 @@ def my_scheduled_job():
         else:
             op = fisher_coeff * ((-10.719 * np.log(int(date)))+ 21.8)
 
-    print("fisher_coeffient:",op)
-    daily_index_data.objects.create(date=old_date,UPI_Vol=UPI_Vol,UPI_Val=UPI_Val,IMPS_Vol=IMPS_Vol,IMPS_Val=IMPS_Val,NACH_Vol=NACH_Vol,NACH_Val=NACH_Val,NETC_Vol=NETC_Vol,NETC_Val=NETC_Val,NEFT_Vol=NEFT_Vol,NEFT_Val=NEFT_Val,RTGS_Vol=RTGS_Vol,RTGS_Val=RTGS_Val,index_value=op)
+        print("fisher_coeffient:",op)
+        daily_index_data.objects.create(date=old_date,UPI_Vol=UPI_Vol,UPI_Val=UPI_Val,IMPS_Vol=IMPS_Vol,IMPS_Val=IMPS_Val,NACH_Vol=NACH_Vol,NACH_Val=NACH_Val,NETC_Vol=NETC_Vol,NETC_Val=NETC_Val,NEFT_Vol=NEFT_Vol,NEFT_Val=NEFT_Val,RTGS_Vol=RTGS_Vol,RTGS_Val=RTGS_Val,index_value=op)
 
 sched.start()
