@@ -42,18 +42,34 @@ old_date = df1.iloc[len1-index]['Data for the day']
 date = old_date.strftime("%d")
 
 tmp = daily_index_data.objects.values().last()
-UPI_Vol     = df1.iloc[len1-index]['Unnamed: 7'] + tmp['UPI_Vol']
-UPI_Val     = df1.iloc[len1-index]['Unnamed: 8'] + tmp['UPI_Val']
-IMPS_Vol    = df1.iloc[len1-index]['Unnamed: 9'] + tmp['IMPS_Vol']
-IMPS_Val    = df1.iloc[len1-index]['Unnamed: 10'] + tmp['IMPS_Val']
-NACH_Vol    = df1.iloc[len1-index]['Unnamed: 11'] + df1.iloc[len1-index]['Unnamed: 13'] + tmp['NACH_Vol']
-NACH_Val    = df1.iloc[len1-index]['Unnamed: 12'] + df1.iloc[len1-index]['Unnamed: 14'] + tmp['NACH_Val']
-NETC_Vol    = df1.iloc[len1-index]['Unnamed: 15'] + tmp['NETC_Vol']
-NETC_Val    = df1.iloc[len1-index]['Unnamed: 16'] + tmp['NETC_Val']
-NEFT_Vol    = df1.iloc[len1-index]['Unnamed: 3'] +  tmp['NEFT_Vol']
-NEFT_Val    = df1.iloc[len1-index]['Unnamed: 4'] +  tmp['NEFT_Val']
-RTGS_Vol    = df1.iloc[len1-index][col_list[2]] + tmp['RTGS_Vol']
-RTGS_Val    = df1.iloc[len1-index]['Unnamed: 2'] + tmp['RTGS_Val']
+
+if int(date) == 1 :
+        UPI_Vol     = df1.iloc[len1-index]['Unnamed: 7'] 
+        UPI_Val     = df1.iloc[len1-index]['Unnamed: 8'] 
+        IMPS_Vol    = df1.iloc[len1-index]['Unnamed: 9'] 
+        IMPS_Val    = df1.iloc[len1-index]['Unnamed: 10'] 
+        NACH_Vol    = df1.iloc[len1-index]['Unnamed: 11'] + df1.iloc[len1-index]['Unnamed: 13'] 
+        NACH_Val    = df1.iloc[len1-index]['Unnamed: 12'] + df1.iloc[len1-index]['Unnamed: 14'] 
+        NETC_Vol    = df1.iloc[len1-index]['Unnamed: 15'] 
+        NETC_Val    = df1.iloc[len1-index]['Unnamed: 16'] 
+        NEFT_Vol    = df1.iloc[len1-index]['Unnamed: 3'] 
+        NEFT_Val    = df1.iloc[len1-index]['Unnamed: 4'] 
+        RTGS_Vol    = df1.iloc[len1-index][col_list[2]] 
+        RTGS_Val    = df1.iloc[len1-index]['Unnamed: 2'] 
+else:
+        UPI_Vol     = df1.iloc[len1-index]['Unnamed: 7'] + tmp['UPI_Vol']
+        UPI_Val     = df1.iloc[len1-index]['Unnamed: 8'] + tmp['UPI_Val']
+        IMPS_Vol    = df1.iloc[len1-index]['Unnamed: 9'] + tmp['IMPS_Vol']
+        IMPS_Val    = df1.iloc[len1-index]['Unnamed: 10'] + tmp['IMPS_Val']
+        NACH_Vol    = df1.iloc[len1-index]['Unnamed: 11'] + df1.iloc[len1-index]['Unnamed: 13'] + tmp['NACH_Vol']
+        NACH_Val    = df1.iloc[len1-index]['Unnamed: 12'] + df1.iloc[len1-index]['Unnamed: 14'] + tmp['NACH_Val']
+        NETC_Vol    = df1.iloc[len1-index]['Unnamed: 15'] + tmp['NETC_Vol']
+        NETC_Val    = df1.iloc[len1-index]['Unnamed: 16'] + tmp['NETC_Val']
+        NEFT_Vol    = df1.iloc[len1-index]['Unnamed: 3'] +  tmp['NEFT_Vol']
+        NEFT_Val    = df1.iloc[len1-index]['Unnamed: 4'] +  tmp['NEFT_Val']
+        RTGS_Vol    = df1.iloc[len1-index][col_list[2]] + tmp['RTGS_Vol']
+        RTGS_Val    = df1.iloc[len1-index]['Unnamed: 2'] + tmp['RTGS_Val']
+        
 
 UPI_Vol_0     = 20.30
 UPI_Val_0     = 709.78
