@@ -91,7 +91,8 @@ for index in i:
 
 	fisher_coeff = (np.sqrt((p1q0/p0q0) * (p1q1/p0q1))) * 100 
 
-	#print(old_date)
+	old_date = df1.iloc[len1-index]['Data for the day']
+  
 	if int(date) > 3 :
 		op = (fisher_coeff * count) / (int(date))
 	else:
