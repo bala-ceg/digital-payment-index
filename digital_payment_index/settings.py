@@ -21,6 +21,12 @@ print(APPLICATION_DIR)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "digital_payment_index.settings")
+
+import django
+django.setup()
+
+from django.core.management import call_command
 
 SECRET_KEY = 'django-insecure-^ko!w%1=n(eqv!yrnb@j(p^gi_j(ib283%0at4x8m15%ziayrb'
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
