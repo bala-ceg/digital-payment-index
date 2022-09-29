@@ -105,4 +105,5 @@ for index in i:
 
 
 	print("fisher_coeffient:",op)
-	daily_index_data.objects.create(date=old_date,UPI_Vol=UPI_Vol,UPI_Val=UPI_Val,IMPS_Vol=IMPS_Vol,IMPS_Val=IMPS_Val,NACH_Vol=NACH_Vol,NACH_Val=NACH_Val,NETC_Vol=NETC_Vol,NETC_Val=NETC_Val,NEFT_Vol=NEFT_Vol,NEFT_Val=NEFT_Val,RTGS_Vol=RTGS_Vol,RTGS_Val=RTGS_Val,index_value=op)
+	p =  daily_index_data(date=old_date,UPI_Vol=UPI_Vol,UPI_Val=UPI_Val,IMPS_Vol=IMPS_Vol,IMPS_Val=IMPS_Val,NACH_Vol=NACH_Vol,NACH_Val=NACH_Val,NETC_Vol=NETC_Vol,NETC_Val=NETC_Val,NEFT_Vol=NEFT_Vol,NEFT_Val=NEFT_Val,RTGS_Vol=RTGS_Vol,RTGS_Val=RTGS_Val,index_value=op)
+	p.save()
