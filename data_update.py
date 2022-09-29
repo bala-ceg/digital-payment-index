@@ -15,16 +15,6 @@ import numpy as np
 theurl ='https://rbidocs.rbi.org.in/rdocs/content/docs/PSDDP04062020.xlsx'
 n1=12
 
-print("Enter index:")
-index = int(input())
-
-
-mydate = datetime.datetime.now()    
-count = calendar.monthrange(mydate.year, mydate.month)[1]
-month = mydate.strftime("%B") 
-year = mydate.strftime("%Y")
-month_year=str(month)+' '+ str(year)
-			#print(month_year)
 
 print("Enter month_year:")
 month_year = str(input())
@@ -34,15 +24,6 @@ output = open('test.xls', 'wb')
 output.write(r.content)
 output.close()
 
-
-xls = pd.ExcelFile('test.xls')
-df1 = pd.read_excel(xls, month_year)
-df1.drop(df1.tail(n1).index,inplace=True)
-df1 = df1.reset_index()
-col_list= list(df1.columns)
-len1=df1.shape[0]
-old_date = df1.iloc[len1-index]['Data for the day']
-date = old_date.strftime("%d")
 
 print("Enter no.of days - 1 in the month :")
 x = int(input())
