@@ -41,7 +41,9 @@ date = 1
 for index in i:
 	index = index + 2
 	tmp = daily_index_data.objects.values().last()
-
+	old_date = df1.iloc[len1-index]['Data for the day']
+	print(old_date)
+	date = old_date.strftime("%d")
 	if int(date) == 1 :
 		UPI_Vol     = df1.iloc[len1-index]['Unnamed: 7'] 
 		UPI_Val     = df1.iloc[len1-index]['Unnamed: 8'] 
@@ -55,7 +57,7 @@ for index in i:
 		NEFT_Val    = df1.iloc[len1-index]['Unnamed: 4'] 
 		RTGS_Vol    = df1.iloc[len1-index][col_list[2]] 
 		RTGS_Val    = df1.iloc[len1-index]['Unnamed: 2'] 
-		date = date + 1
+		
 	else:
 		UPI_Vol     = df1.iloc[len1-index]['Unnamed: 7'] + tmp['UPI_Vol']
 		UPI_Val     = df1.iloc[len1-index]['Unnamed: 8'] + tmp['UPI_Val']
@@ -69,7 +71,7 @@ for index in i:
 		NEFT_Val    = df1.iloc[len1-index]['Unnamed: 4'] +  tmp['NEFT_Val']
 		RTGS_Vol    = df1.iloc[len1-index][col_list[2]] + tmp['RTGS_Vol']
 		RTGS_Val    = df1.iloc[len1-index]['Unnamed: 2'] + tmp['RTGS_Val']
-		date = date + 1
+		
 
 	UPI_Vol_0     = 20.30
 	UPI_Val_0     = 709.78
@@ -93,15 +95,13 @@ for index in i:
 
 	fisher_coeff = (np.sqrt((p1q0/p0q0) * (p1q1/p0q1))) * 100 
 
-	old_date = df1.iloc[len1-index]['Data for the day']
-	print(old_date)
 	
 	if int(date) > 3 :
 		op = (fisher_coeff * count) / (int(date))
 		print(date)
 	else:
 		op = fisher_coeff * ((-10.719 * np.log(int(date)))+ 21.8)
-
+		print(date)
 
 
 	print("fisher_coeffient:",op)
