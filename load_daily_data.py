@@ -1,3 +1,9 @@
+import os
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'digital_payment_index.settings')
+
+import django
+django.setup()
+
 import csv
 from digital_payment_index.models import  daily_index_data
 
