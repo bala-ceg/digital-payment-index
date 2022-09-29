@@ -45,6 +45,7 @@ old_date = df1.iloc[len1-index]['Data for the day']
 date = old_date.strftime("%d")
 
 print("Enter no.of days - 1 in the month :")
+x = int(input())
 
 i = range(x,-1,-1)
 date = 1
