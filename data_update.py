@@ -39,7 +39,7 @@ i = range(x,-1,-1)
 count = x + 1
 date = 1
 for index in i:
-	index = index + 1
+	index = index + 2
 	tmp = daily_index_data.objects.values().last()
 
 	if int(date) == 1 :
@@ -94,9 +94,11 @@ for index in i:
 	fisher_coeff = (np.sqrt((p1q0/p0q0) * (p1q1/p0q1))) * 100 
 
 	old_date = df1.iloc[len1-index]['Data for the day']
-  
+	print(old_date)
+	
 	if int(date) > 3 :
 		op = (fisher_coeff * count) / (int(date))
+		print(date)
 	else:
 		op = fisher_coeff * ((-10.719 * np.log(int(date)))+ 21.8)
 
