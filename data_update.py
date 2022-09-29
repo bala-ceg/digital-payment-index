@@ -36,8 +36,10 @@ print("Enter no.of days - 1 in the month :")
 x = int(input())
 
 i = range(x,-1,-1)
+count = x + 1
 date = 1
 for index in i:
+	index = index + 1
 	tmp = daily_index_data.objects.values().last()
 
 	if int(date) == 1 :
