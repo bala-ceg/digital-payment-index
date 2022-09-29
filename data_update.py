@@ -26,6 +26,9 @@ year = mydate.strftime("%Y")
 month_year=str(month)+' '+ str(year)
 			#print(month_year)
 
+print("Enter index:")
+month_year = str(input())
+
 r=requests.get(theurl)
 output = open('test.xls', 'wb')
 output.write(r.content)
