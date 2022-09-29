@@ -39,7 +39,7 @@ i = range(x,-1,-1)
 count = x + 1
 date = 1
 for index in i:
-	index = index + 2
+	index = index + 1
 	tmp = daily_index_data.objects.values().last()
 	old_date = df1.iloc[len1-index]['Data for the day']
 	print(old_date)
