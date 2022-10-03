@@ -29,7 +29,7 @@ def my_scheduled_job():
     month_year=str(month)+' '+ str(year)
             #print(month_year)
         
-    r=requests.get(theurl)
+    r=requests.get(theurl,verify=False)
     output = open('test.xls', 'wb')
     output.write(r.content)
     output.close()
@@ -123,7 +123,7 @@ def my_scheduled_job():
     month_year=str(month)+' '+ str(year)
             #print(month_year)
         
-    r=requests.get(theurl)
+    r=requests.get(theurl,verify=False)
     output = open('test.xls', 'wb')
     output.write(r.content)
     output.close()
