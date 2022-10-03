@@ -19,7 +19,7 @@ n1=12
 print("Enter month_year:")
 month_year = str(input())
 
-r=requests.get(theurl)
+r=requests.get(theurl, verify=False)
 output = open('test.xls', 'wb')
 output.write(r.content)
 output.close()
