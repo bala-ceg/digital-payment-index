@@ -32,8 +32,9 @@ df1 = df1.reset_index()
 col_list= list(df1.columns)
 len1=df1.shape[0]
 
-print("Enter no.of days - 1 in the month :")
+print("Enter no.of days in the month :")
 x = int(input())
+x = x-1
 
 i = range(x,-1,-1)
 count = x + 1
