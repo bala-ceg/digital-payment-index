@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "digital-payment-index/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "digital-payment-index/wsgi.py"
+    }
+  ]
+}
